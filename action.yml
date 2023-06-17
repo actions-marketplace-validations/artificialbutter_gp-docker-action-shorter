@@ -1,5 +1,5 @@
-name: 'Build and publish Docker Images to GitHub Container registry'
-description: 'Supports custom Dockerfile name, tags, build context, etc. Could generate Docker tags based on git branches.'
+name: 'Build and publish Docker Images to GHCR (without reponame/imagename)'
+description: 'Fork of VaultVulp/gp-docker-action as I want to not have to use the reponame/imagename format for image names that VaultVulp uses.'
 inputs:
   github-token:
     description: 'GitHub token to push Docker image to GitHub Packages'
