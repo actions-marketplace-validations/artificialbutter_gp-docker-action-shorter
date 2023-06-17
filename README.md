@@ -18,10 +18,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2.5.0 # Checking out the repo
+    - uses: actions/checkout@v3.5.3 # Checking out the repo
 
     - name: Build and publish "head" Docker image
-      uses: VaultVulp/gp-docker-action@1.6.0
+      uses: artificialbutter/gp-docker-action-shorter@1.6.1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }} # Provide GITHUB_TOKEN to login into the GitHub Packages
         image-name: my-cool-service # Provide Docker image name
@@ -44,10 +44,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2.5.0 # Checking out the repo
+    - uses: actions/checkout@v3.5.3 # Checking out the repo
 
     - name: Build and publish "latest" Docker image
-      uses: VaultVulp/gp-docker-action@1.6.0
+      uses: artificialbutter/gp-docker-action-shorter@1.6.1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }} # Provide GITHUB_TOKEN to login into the GitHub Packages
         image-name: my-cool-service # Provide only Docker image name, tag will be automatically set to latest
@@ -70,10 +70,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2.5.0 # Checking out the repo
+    - uses: actions/checkout@v3.5.3 # Checking out the repo
     
     - name: Build and publish Docker image tagged according to a git-tag
-      uses: VaultVulp/gp-docker-action@1.6.0
+      uses: artificialbutter/gp-docker-action-shorter@1.6.1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }} # Provide GITHUB_TOKEN to login into the GitHub Packages
         image-name: my-cool-service # Provide only Docker image name
@@ -93,10 +93,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2.5.0 # Checking out the repo
+    - uses: actions/checkout@v3.5.3 # Checking out the repo
     
     - name: Build and publish Docker image from a different context
-      uses: VaultVulp/gp-docker-action@1.6.0
+      uses: artificialbutter/gp-docker-action-shorter@1.6.1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }} # Provide GITHUB_TOKEN to login into the GitHub Packages
         image-name: my-cool-service # Provide Docker image name
@@ -116,10 +116,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2.5.0 # Checking out the repo
+    - uses: actions/checkout@v3.5.3 # Checking out the repo
 
     - name: Pull, build and publish Docker image
-      uses: VaultVulp/gp-docker-action@1.6.0
+      uses: artificialbutter/gp-docker-action-shorter@1.6.1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }} # Provide GITHUB_TOKEN to login into the GitHub Packages
         image-name: my-cool-service # Provide Docker image name
@@ -167,10 +167,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2.5.0 # Checking out the repo
+    - uses: actions/checkout@v3.5.3 # Checking out the repo
  
     - name: Build and publish Docker image with multiple tags
-      uses: VaultVulp/gp-docker-action@1.6.0
+      uses: artificialbutter/gp-docker-action-shorter@1.6.1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }} # Provide GITHUB_TOKEN to login into the GitHub Packages
         image-name: my-cool-service # Provide Docker image name
@@ -203,10 +203,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2.5.0 # Checking out the repo
+    - uses: actions/checkout@v3.5.3 # Checking out the repo
  
     - name: Build and publish Docker image for ARM64 and AMD64 architectures at the same time
-      uses: VaultVulp/gp-docker-action@1.6.0
+      uses: artificialbutter/gp-docker-action-shorter@1.6.1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }} # Provide GITHUB_TOKEN to login into the GitHub Packages
         image-name: my-cool-service # Provide Docker image name
@@ -239,19 +239,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2.5.0 # Checking out the repo
+    - uses: actions/checkout@v3.5.3 # Checking out the repo
  
     - name: Build and publish Docker image with arbitrary --build-arg(s)
-      uses: VaultVulp/gp-docker-action@1.6.0
+      uses: artificialbutter/gp-docker-action-shorter@1.6.1
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }} # Provide GITHUB_TOKEN to login into the GitHub Packages
         image-name: my-cool-service # Provide Docker image name
         custom-args: --build-arg=some="value" --build-arg=some_other="value" # Pass some additional arguments to the docker build command
 ```
-
-## My own repo with examples
-
-[VaultVulp/test-gp-docker-action](https://github.com/VaultVulp/test-gp-docker-action)
 
 ## Security considerations
 
