@@ -1,5 +1,5 @@
 name: 'Build and publish Docker Images to GHCR (without reponame/imagename)'
-description: 'Fork of VaultVulp/gp-docker-action as I want to not have to use the reponame/imagename format for image names that VaultVulp uses.'
+description: 'Fork of VaultVulp/gp-docker-action.'
 inputs:
   github-token:
     description: 'GitHub token to push Docker image to GitHub Packages'
